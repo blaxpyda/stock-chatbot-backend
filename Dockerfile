@@ -15,4 +15,4 @@ ADD . /app
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
-CMD ["uv", "run", "fastapi", "main:app", "--host", "0.0.0.0", "--port", "80", "--reload", "--reload-dir", "backend"]
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]

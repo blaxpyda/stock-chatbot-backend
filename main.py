@@ -23,7 +23,7 @@ app.add_middleware(
 class AgentRequest(BaseModel):
     input_data: str
 
-@app.post('/agent')
+@app.post('/agent/')
 async def run_agent(request: AgentRequest):
     """
     Endpoint to run the agent with the provided input data.
